@@ -40,7 +40,8 @@
   },
   "scripts": {
     "start": "live-server public/",
-    "build": "webpack",
+    "build:dev": "webpack",
+    "build:prod": "webpack -p",
     "devServer": "webpack-dev-server",
     "test": "jest --config=jest.config.json"
   },
