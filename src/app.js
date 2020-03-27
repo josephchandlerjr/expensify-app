@@ -17,7 +17,7 @@ import 'react-dates/lib/css/_datepicker.css'
 
 
 const store = configureStore()
-store.subscribe( () => console.log(store.getState()))
+// store.subscribe( () => console.log(store.getState()))
 
 store.dispatch(addExpense({description: 'Water Bill', amount: 15000, createdAt: 1585670400000}))
 store.dispatch(addExpense({description: 'Gas Bill', amount: 20000, createdAt: -5000}))
