@@ -1,7 +1,7 @@
 import React from 'react'
 import { AddExpensePage } from '../../components/AddExpensePage'
 import { shallow } from 'enzyme'
-import { expenses } from '../fixtures/expenses'
+import expenses from '../fixtures/expenses'
 
 let onSubmitSpy, historySpy, wrapper
 

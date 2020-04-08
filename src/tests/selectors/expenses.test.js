@@ -1,6 +1,6 @@
 import selectExpenses from '../../selectors/expenses'
 import moment from 'moment'
-import { expenses } from '../fixtures/expenses'
+import expenses from '../fixtures/expenses'
 
 test('should filter by text value', () => {
     const filters = {
@@ -56,19 +56,3 @@ test('should sort by amount', () => {
     expect(result).toEqual([expenses[1], expenses[2], expenses[0]])
 })
 
-// //get visible expenses
-// export default (expenses, { text, sortBy, startDate, endDate}) => {
-//     return expenses.filter( (expense) => {
-//         const createdAtMoment = moment(expense.createdAt)
-//         const startDateMatch = startDate ? startDate.isSameOrBefore(createdAtMoment, 'day') : true
-//         const endDateMatch =  endDate ? endDate.isSameOrAfter(createdAtMoment, 'day') : true
-//         const textMatch = text === '' || expense.description.toLowerCase().includes(text.toLowerCase())
-//         return startDateMatch && endDateMatch && textMatch
-//     }).sort( (a, b) => {
-//         if (sortBy === 'date'){
-//             return a.createdAt < b.createdAt ? -1 : 1
-//         } else {
-//             return a.amount < b.amount ? -1 : 1
-//         }
-//     })
-// }
